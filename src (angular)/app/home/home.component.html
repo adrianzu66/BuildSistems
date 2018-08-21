@@ -1,0 +1,20 @@
+<tda-barra-superior [totalItems]="totalItems"></tda-barra-superior>
+<div id="items" class="row white">
+  <tda-busqueda (messageEventProductos)="receiveMessageProductos($event)"></tda-busqueda>
+  <div>
+    <tda-item *ngFor="let product of products"
+      [imgeUrl]="product.urlImage"
+      [name]="product.name"
+      [price]="product.price"
+      [quantity]="product.quantity"
+      [description]="product.description"
+      (messageEvent)="receiveMessage($event)">
+    </tda-item>
+  </div>
+</div>
+<div id="resumen" class="row white">
+  <tda-resumen-compras [productos]="this.productsAdd"
+  [totalProductos]="this.totalItems"
+  [totalPagar]="this.totalPagar"
+  (messageCancel)="receiveCancel($event)"></tda-resumen-compras>
+</div>

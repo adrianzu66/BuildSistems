@@ -1,0 +1,20 @@
+.responsive {
+  margin-top: -1%;
+}
+.notification-badge {
+  position: relative;
+  right: -12px;
+  top: -16px;
+  background-color:red;
+  border-radius: 50%;
+  color: white;
+  padding: 3px 6px;
+  font-size: 65%;
+  /* ;
+  margin: 0 -.8em;
+
+   */
+}
+.notif{
+  position: absolute;
+}

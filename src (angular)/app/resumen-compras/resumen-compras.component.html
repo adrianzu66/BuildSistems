@@ -1,0 +1,33 @@
+<div class="col l12 m12 s12">
+  <h4>
+    <i class="material-icons notif">shopping_cart</i>
+    RESUMEN DE COMPRAS
+  </h4>
+</div>
+<div class="col l8 m7 s12">
+  <div class="collection">
+    <a *ngFor="let product of productos" class="collection-item valign-wrapper">
+      <span class="badge">
+        <p>Cantidad: {{product.quantity}}</p>
+        <p>Total: {{product.quantity * product.price}}</p>
+      </span>
+      <img class="valign-wrapper responsive" src={{product.imageUrl}}
+        alt="">{{product.name}}</a>
+    <a class="collection-item">
+      <span class="badge">{{totalProductos}}</span>Total</a>
+  </div>
+</div>
+<div class="col l4 m5 s12">
+  <h5>Total a pagar: {{totalPagar}}</h5>
+
+  <form class="s12">
+    <div class="row">
+      <button (click)="shop('#items','#resumen',true)" class="btn waves-effect waves-light" name="action">Shop
+        <i class="material-icons right">check_circle</i>
+      </button>
+      <button (click)="cancel('#items','#resumen',true)" class="btn waves-effect waves-light red lighten-2" name="action">Cancel
+        <i class="material-icons right">cancel</i>
+      </button>
+    </div>
+  </form>
+</div>
